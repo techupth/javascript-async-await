@@ -1,6 +1,6 @@
 //Exercise #2
 let getJohnProfile = () => {
-  return new Promise(function (_, reject) {
+  return new Promise(function (resolve, reject) {
     setTimeout(
       () =>
         reject({
@@ -13,3 +13,7 @@ let getJohnProfile = () => {
 };
 
 // Start coding here
+function handleData(getJohnProfile) {
+  console.log(getJohnProfile);
+}
+getJohnProfile().then(handleData).catch(handleData);
